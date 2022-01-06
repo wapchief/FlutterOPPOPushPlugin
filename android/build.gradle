@@ -12,6 +12,7 @@ def getCurrentProjectDir() {
 buildscript {
     repositories {
         google()
+        jcenter()
         maven {
             url 'https://maven.columbus.heytapmobi.com/repository/releases/'
             credentials {
@@ -46,11 +47,11 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 23
+        minSdkVersion 21
     }
 }
 
 dependencies {
-    implementation 'com.heytap.msp:push:3.0.0'
+    implementation 'com.wapchief:heytap-msp-oppo:0.0.1'
 
 }
