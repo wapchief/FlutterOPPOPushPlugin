@@ -1,8 +1,6 @@
-name: flutter_oppo_push_plugin
+name: flutter_oppo_push_plugin_example
 description: Demonstrates how to use the flutter_oppo_push_plugin plugin.
-repository: https://github.com/wapchief/FlutterOPPOPushPlugin
-homepage: https://github.com/wapchief/FlutterOPPOPushPlugin
-version: 0.0.1
+
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
