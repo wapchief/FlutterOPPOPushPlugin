@@ -41,12 +41,13 @@ public class FlutterOppoPushPlugin implements FlutterPlugin, MethodCallHandler {
 
     @Override
     public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
+        if (!android.os.Build.BRAND.toLowerCase().contains("oppo")) {
+            Log.d(TAG, "not oppo mobile devices !!!");
+            return;
+        }
         if (call.method.equals("initSDK")) {
-            if (!android.os.Build.BRAND.toLowerCase().contains("oppo")) {
-                Log.d(TAG, "not oppo mobile devices !!!");
-                return;
-            }
             HeytapPushManager.init(mApplication, call.argument("isDebug"));
+        } else if (call.method.equals("register")) {
             HeytapPushManager.register(mApplication, call.argument("key"), call.argument("secret"),
                     new ICallBackResultService() {
                         @Override
@@ -82,9 +83,6 @@ public class FlutterOppoPushPlugin implements FlutterPlugin, MethodCallHandler {
 
                         }
                     });
-        } else if (call.method.equals("getPushStatus")) {
-
-//            channel.invokeMethod("getPushStatus",);
         } else {
             result.notImplemented();
         }
