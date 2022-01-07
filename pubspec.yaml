@@ -1,12 +1,12 @@
 name: flutter_oppo_push_plugin
 description: A new Flutter project.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/wapchief/FlutterOPPOPushPlugin
 homepage: https://github.com/wapchief/FlutterOPPOPushPlugin
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
-  flutter: ">=2.5.0"
+  flutter: ">=2.0.0"
 
 dependencies:
   flutter:
